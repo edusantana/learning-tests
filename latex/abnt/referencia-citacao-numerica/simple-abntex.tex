@@ -1,0 +1,46 @@
+\documentclass{abntex2}
+
+\usepackage{etoolbox}
+\usepackage[numbers,round,comma]{natbib}
+%\usepackage[num]{abntex2cite}
+
+\makeatletter % Reference list option change
+\renewcommand\@biblabel[1]{#1} % from [1] to 1
+\makeatother %
+
+
+\begin{document}
+
+
+\AtEndEnvironment{thebibliography}{
+% all your extra bibitems go here
+\bibitem{CRETELLA1992} CRETELLA JUNIOR, Jose. {\em Do impeachment no direito brasileiro}.
+[São Paulo]: R. dos Tribunais, 1992. p. 107. mhas jdhgasjd kjhsagdkjhgas kdjsa.
+}
+
+De acordo com as novas tendências da jurisprudência brasileira \cite{CRETELLA1992}, é facultado ao
+magistrado decidir sobre a matéria.
+
+
+Todos os índices coletados para a região escolhida foram analisados minuciosamente 2 .
+Na lista de referências:
+
+ 
+BOLETIM ESTATÍSTICO [da] Rede Ferroviária Federal. Rio de
+Janeiro, 1965. p. 20.
+
+
+Cite from above \cite{extra1}.
+
+\AtEndEnvironment{thebibliography}{
+% all your extra bibitems go here
+\bibitem{extra1}SOBRENOME, N. {\emph Titulo}: Subtítulo. 20XX.
+}
+
+
+%\bibliographystyle{plainnat}
+
+\bibliographystyle{vancouver}
+\bibliography{master.bib} 
+
+\end{document}
