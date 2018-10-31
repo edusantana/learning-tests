@@ -1,3 +1,5 @@
+require 'rake/clean'
+
 
 directory 'tmp'
 
@@ -11,6 +13,11 @@ task :html => ['tmp']do
 
 end
 
+desc 'atualiza código gerado'
+task :update do
+  sh "claat update -o tmp/ git.md"
+end
+
 file 'tmp/git-exemplo1/index.html'
 
 desc 'Serve localmente arquivo gerado'
@@ -19,3 +26,7 @@ task 'serve' do
     sh "claat serve"
   end
 end
+
+CLEAN.include("tmp")
+
+task :default => ['html']

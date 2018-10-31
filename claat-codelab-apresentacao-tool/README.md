@@ -9,3 +9,14 @@
 * [Instalação do claat](https://github.com/googlecodelabs/tools/tree/master/claat)
 
 
+# Para experimentar
+
+
+        rake html
+        rake serve
+
+Verifica o diretório `tmp` que será criado e a página que será aberta.
+
+Atualiza o arquivo `git.md` e invoca:
+
+        rake update
